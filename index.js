@@ -127,11 +127,11 @@ window.addEventListener("DOMContentLoaded", () => {
         templates: {
           item: `
           <div class="hit-wrap">
-              <a href="/movies/{{slug}}">
-                  <img class="hit-image" src="{{moviePoster}}" align="left" alt="{{name}}" />
+              <a href="/movies/{{Slug}}">
+                  <img class="hit-image" src="{{Movie poster}}" align="left" alt="{{Name}}" />
               </a>            
           </div>   
-          <span class="hit-vote-average">{{voteAverage}}</span>     
+          <span class="hit-vote-average">{{Vote average}}</span>     
           `,
         },
       }),
