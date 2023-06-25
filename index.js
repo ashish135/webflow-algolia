@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
     // establish connection to search index with application ID and public api key from algolia
     const searchClient = algoliasearch(
-      "JUT1JJ1SC5",
-      "a17d53951a698aae98c5abfe99ef54d0"
+      "6RJT8M6BD5",
+      "113ff52e9d3bd9f965ce3ba85217a2c2"
     );
   
     const search = instantsearch({
@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Genre component
       instantsearch.widgets.refinementList({
         container: "#genre-list",
-        attribute: "{{Genres}}",
+        attribute: "genres",
         cssClasses: {
           checkbox: "wf-refinmentlist-checkbox",
           count: "wf-refinmentlist-count",
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Rating component
       instantsearch.widgets.ratingMenu({
         container: "#vote-average",
-        attribute: "{{Vote average}}",
+        attribute: "voteAverage",
         cssClasses: {
           item: "wf-rating-item",
           selectedItem: "wf-rating-selected-item",
@@ -66,12 +66,12 @@ window.addEventListener("DOMContentLoaded", () => {
       // Year component (Range slider)
       instantsearch.widgets.rangeSlider({
         container: "#release-year",
-        attribute: "{{Release year}}",
+        attribute: "releaseYear",
       }),
       // Votes component (Range slider)
       instantsearch.widgets.rangeSlider({
         container: "#vote-count",
-        attribute: "{{Vote count}}",
+        attribute: "voteCount",
       }),
       // Search component
       instantsearch.widgets.searchBox({
@@ -83,7 +83,13 @@ window.addEventListener("DOMContentLoaded", () => {
           resetIcon: "wf-search-reset",
         },
       }),
-
+      // Powered by algolia logo component
+      instantsearch.widgets.poweredBy({
+        container: "#poweredBy",
+        cssClasses: {
+          root: "wf-powered-by",
+        },
+      }),
       // Stats component
       instantsearch.widgets.stats({
         container: "#stats",
@@ -127,11 +133,11 @@ window.addEventListener("DOMContentLoaded", () => {
         templates: {
           item: `
           <div class="hit-wrap">
-              <a href="/movies/{{Slug}}">
-                  <img class="hit-image" src="{{Movie poster}}" align="left" alt="{{Name}}" />
+              <a href="/movies/{{slug}}">
+                  <img class="hit-image" src="{{moviePoster}}" align="left" alt="{{name}}" />
               </a>            
           </div>   
-          <span class="hit-vote-average">{{Vote average}}</span>     
+          <span class="hit-vote-average">{{voteAverage}}</span>     
           `,
         },
       }),
