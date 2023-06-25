@@ -83,13 +83,6 @@ window.addEventListener("DOMContentLoaded", () => {
           resetIcon: "wf-search-reset",
         },
       }),
-      // Powered by algolia logo component
-      instantsearch.widgets.poweredBy({
-        container: "#poweredBy",
-        cssClasses: {
-          root: "wf-powered-by",
-        },
-      }),
       // Stats component
       instantsearch.widgets.stats({
         container: "#stats",
