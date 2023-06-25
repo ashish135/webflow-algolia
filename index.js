@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Year component (Range slider)
       instantsearch.widgets.rangeSlider({
         container: "#release-year",
-        attribute: "Release year",
+        attribute: "releaseYear",
       }),
       // Votes component (Range slider)
       instantsearch.widgets.rangeSlider({
