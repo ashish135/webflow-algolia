@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Genre component
       instantsearch.widgets.refinementList({
         container: "#genre-list",
-        attribute: "Genres",
+        attribute: "{{Genres}}",
         cssClasses: {
           checkbox: "wf-refinmentlist-checkbox",
           count: "wf-refinmentlist-count",
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
       // Rating component
       instantsearch.widgets.ratingMenu({
         container: "#vote-average",
-        attribute: "Vote average",
+        attribute: "{{Vote average}}",
         cssClasses: {
           item: "wf-rating-item",
           selectedItem: "wf-rating-selected-item",
@@ -66,12 +66,12 @@ window.addEventListener("DOMContentLoaded", () => {
       // Year component (Range slider)
       instantsearch.widgets.rangeSlider({
         container: "#release-year",
-        attribute: "releaseYear",
+        attribute: "{{Release year}}",
       }),
       // Votes component (Range slider)
       instantsearch.widgets.rangeSlider({
         container: "#vote-count",
-        attribute: "Vote count",
+        attribute: "{{Vote count}}",
       }),
       // Search component
       instantsearch.widgets.searchBox({
