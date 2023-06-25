@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
       searchClient,
     });
   
+    console.log("=>", searchClient, search)
     // add each widget
     search.addWidgets([
       // Clear Filters button
